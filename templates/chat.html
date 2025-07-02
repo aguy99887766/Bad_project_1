@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<html>
+
+	<title>
+		Chat
+	</title>
+	
+	<body>
+		<p>USERNAME {{ username }}</p>
+
+		{% if messages %}
+			{% for m in messages %}
+				<p> {{ m["USER"] }}: {{ m["MESSAGE"] }} </p>
+			{% endfor %}
+		{% endif %}
+
+		<form method="post">
+			<input type="text", name="content"/>
+			<input type="submit", name="action", value="send_message"/>
+		</form>
+	</body>
+</html>
