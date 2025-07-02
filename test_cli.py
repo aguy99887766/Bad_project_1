@@ -1,6 +1,6 @@
 import sys
 import time
-from backend import message, get_messages
+from messanger import message, get_messages
 
 args = sys.argv[1:]
 if not args:
